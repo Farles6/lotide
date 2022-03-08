@@ -14,10 +14,10 @@ assertEqual(1, 2);
 assertEqual('hello', 'hello');
 */
 
-const head = function(actual, expected) {
- return actual[0];
-}
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head([]), 1);
-assertEqual(head([6]), 5);
+const tail = function(actual) {
+  return actual[0];
+};
+assertEqual(tail([5, 6, 7]), 5);
+assertEqual(tail(["Hello", "Lighthouse", "Labs"]), "Hello");
+assertEqual(tail([]), 1);
+assertEqual(tail([6]), 5);
