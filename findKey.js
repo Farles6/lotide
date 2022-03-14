@@ -1,17 +1,16 @@
-const assertEqual = (actual, expected) => {
-  if (actual === expected) {
-    console.log(`✅✅ Assertion Passed: ${actual} === ${expected}`);
-    return `✅✅ Assertion Passed: ${actual} === ${expected}`;
-  } else {
-    console.log(`🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-    return `🛑🛑 Assertion Failed: ${actual} !== ${expected}`;
-  }
-};
+// const assertEqual = (actual, expected) => {
+//   if (actual === expected) {
+//     console.log(`✅✅ Assertion Passed: ${actual} === ${expected}`);
+//     return `✅✅ Assertion Passed: ${actual} === ${expected}`;
+//   } else {
+//     console.log(`🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+//     return `🛑🛑 Assertion Failed: ${actual} !== ${expected}`;
+//   }
+// };
 
 const findKey = (obj, cb) => {
   for (let key in obj) {
     if (cb(obj[key])) {
-      console.log(key);
       return key;
     }
   }
@@ -29,4 +28,8 @@ const result = findKey(
   (x) => x.stars === 2
 ); // => "noma"
 
-assertEqual(result, "noma");
+
+module.exports = findKey;
+
+
+// assertEqual(result, "noma");
